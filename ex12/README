@@ -1,0 +1,179 @@
+Adi.strauss
+Orel.benisrael
+
+Adi Strauss
+Orel Ben Israel
+
+
+We discussed the exercise with: no one
+
+=============================
+=  README for ex12:
+=============================
+The main file: ex12.py
+files being submitted:
+game.py
+ai.py
+players.py
+gui.py
+four_in_a_row.py
+README
+AUTHORS
+
+==================
+=  Description  =
+==================
+
+file name + file description:
+
+# game.py:
+Contains the Game class: This class defines the game and its attributes
+(visual board, coordinates of the board and the current player of the game),
+in addition this class operates some method on the game object.
+Methods:
+1) get_current_player:
+This method get us the current player
+2) set_current_player:
+This method updates the current player attribute.
+3) get_visual_board:
+This method get us the visual board.
+4) set_visual_board:
+This method updates the visual board.
+5) get_coordinates_board:
+This method get us the list of the board of coordinates.
+6) make_move:
+This method changes the disc board if the given column is legal (empty and
+defined in the board).
+7) define_player:
+This method changes the current player'to the other player.
+8) get_winner:
+This method checks if someone won in the game, or the board is full and there
+is a tie.
+9) check_columns:
+This method converts the board's columns to list of lists.
+10) check_diagonals_up_and_right:
+This method converts the board's diagonals (up and right) to list of lists.
+11) check_diagonals_down_and_right:
+This method converts the board's diagonals (down and right) to list of lists.
+12) check_rows:
+This method checks if there is a sequence of 4 '1' or '2' in the list.
+13) get_player_at:
+This method gets a location, checks if the location is legal, if it is, it
+returns the disc in this place.
+14) get_first_convert_dict:
+This method returns the dictionary which contains connect between coordinates
+of the convert board with the coordinates of the original game board.
+15) get_second_convert_dict:
+This method returns the dictionary which contains connect between coordinates
+of the convert board with the coordinates of the original game board.
+16) find_win_coordinates:
+This method check which is the first coordinates and the last coordinates of a
+ winning sequence in the game.
+17) find_coordinates:
+This method returns the first winning coordinates of the convert board.
+
+# ai.py:
+Contains the ai class: This class defines the legal column the ai player can
+choose in order to put
+disc in this column of the board game.
+Methods:
+1) find_legal_move:
+This method randoms a legal value for the column.
+2) get_game:
+This method returns the game object.
+
+# players.py:
+Contains the player class: This class defines the different players of the
+game (whether AI or real human being), and operates some methods on them.
+Methods:
+1) get_current_player_brain:
+This method get us the current player brain.
+2) get_current_player_num:
+This method get us the current player.
+3) set_player_brain:
+This method updates the current player attribute.
+4) get_ai_brain:
+This method returns the ai object.
+
+# gui.py:
+Contains the gui class: This class defines all the visual pages of the game
+(open page, game page and end page and mannaging the game itself).
+Methods:
+1) show_frame:
+This method shows the relevant page in the front of the screen.
+2) is_game_over:
+This method checks if the game ended or did not,and call the matching methods.
+3) run_single_turn:
+This method runs in loop during the whole game.
+4) visual_player_turn:
+This method creates visual representation of the current player turn.
+5) create_start_page:
+This method creates the start game page.
+6) start_page_buttons:
+This method defines the buttons (players, exit and play) and connects them to
+the relevant page.
+7) buttons_actions:
+This method defines the players buttons in the first page.
+8) create_game_page:
+This method defines the game page.
+9) create_buttons:
+This method creates the columns buttons of the board.
+10) click_button:
+This method checks whether the move can be performed by the button number
+which have been pressed.
+11) create_ball:
+This method creates disc according the current player.
+12) move_ball:
+This method creates the animation of the dropping ball on the canvas.
+13) create_end_page:
+This method defines the end page.
+14) click_start_new_game:
+This method creates new game.
+
+# four_in_a_row.py:
+Contains the maingame class: This class is the main class which operates the
+game itself. This class calls the game, and the gui classes to action.
+1)gui_go:
+This method starts the Gui visualization.
+2)restart_game:
+This method starts the game and defines the two players of the game.
+
+=======================
+=  Special Comments =
+=======================
+Bonuses:
+We did one of the bonuses: we hope you would like our special design of the
+game. Surprise - while you run our game put your loudspeakers on! we
+made a nice surprise for you!
+Our design contain a lot of pictures and we took the design to the next level
+by adding music!
+Have fun!
+
+Code Structure:
+In the first part of the ReadMe you can see the whole details of our
+files, classes and methods. Here we explain why we chose that structure
+of the code:
+The MainGame class manages the whole game, from that class we defines the
+Game class. In addition, from there we creates the 2 players of the game
+and the visual game. This class is the "brain" of our game. This class runs
+the whole game.
+The Gui class responsible for the all different visualizations of the game
+itself, meaning this class creates the whole "interface" of the game for the
+user. This class connects to the Game class which does all the basic checks
+and basic actions behind the scenes, in order to help the Gui. The Gui class
+connects to the AI class which calculates the actions of the ai player and
+simulates it.
+The MainGame class and the Gui class connect to the Player class which stores
+the information about the players of the current game, whether human being or
+artificial intelligence.
+
+As you can see our classes are divided by conceptual division. Every class
+responsible for its own field, this way the most important class which
+manages everything knows the other classes. That way, the the most basic
+class (the Game class) doesnt know the roles of the game and the other
+classes.
+
+That way each class have specific role on that "Four in a Row" game, and the
+different classes are part of code hierarchy/layers.
+
+======================
