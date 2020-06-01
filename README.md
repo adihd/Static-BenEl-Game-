@@ -1,6 +1,10 @@
 # Static-BenEl-Game-
 Static &amp; Ben El 4 in a row game
 
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
-![GitHub Logo](/images/logo.png)
+# Screen 1
+![GitHub Logo](/1.png)
+
+# Screen 2
+
+![GitHub Logo](/2.png)
 
